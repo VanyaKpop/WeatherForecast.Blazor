@@ -1,0 +1,71 @@
+/* /Components/Weather.razor.rz.scp.css */
+*[b-ywkh75ocxd] {
+    box-sizing: border-box;
+    font-family: "Verdana", sans-serif;
+}
+
+.column[b-ywkh75ocxd] {
+    flex-direction: column;
+}
+
+.row[b-ywkh75ocxd] {
+    flex-direction: row;
+}
+
+.Container[b-ywkh75ocxd] {
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 15px;
+}
+
+
+    .Container > p[b-ywkh75ocxd] {
+        float: right;
+    }
+
+    .Container > .Info[b-ywkh75ocxd] {
+        display: flex;
+    }
+
+        .Container > .Info > p[b-ywkh75ocxd] {
+            margin-right: 5px;
+        }
+
+
+.Input__button[b-ywkh75ocxd] {
+    border-radius: 16px;
+    outline: 0;
+    background-color: #FF6D07;
+    border: 0;
+}
+
+        
+/* /Pages/Home.razor.rz.scp.css */
+.Parent[b-jx1mla5jze] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.literallyCircle[b-jx1mla5jze] {
+    background-color: #FF6D07;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 100px;
+    margin-top: 0;
+    margin-left: 350px;
+    margin-right: 0;
+    padding: 0;
+    border-radius: 50%;
+    position: absolute;
+}
