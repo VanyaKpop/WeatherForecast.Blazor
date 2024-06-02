@@ -20,7 +20,7 @@ jobs:
         include-prerelease: true
         
     - name: Change base-tag in index.html from / to BlazorApp1
-      run: sed -i 's/<base href="\/" \/>/<base href="\/WeatherForecast\/" \/>/g' wwwroot/index.html
+      run: sed -i 's/<base href="\/" \/>/<base href="\/WeatherForecast.Blazor\/" \/>/g' wwwroot/index.html
 
     - name: Add .nojekyll file
       run: touch wwwroot/.nojekyll
