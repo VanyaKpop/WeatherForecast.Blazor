@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+# Запускаем магию только на пуши в main
+on:
+  push:
+    branches: main
+    
+jobs:
+  deploy-to-github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      # клонируем репозиторий на виртуальную машину
+    - uses: actions/checkout@v2
+    
+      # ставим нужный SDK (можно использовать и более старые)
+    - name: Setup .NET 8
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '8.0.x'
+        include-prerelease: true
+        
+    - name: Change base-tag in index.html from / to BlazorApp1
+      run: sed -i 's/<base href="\/" \/>/<base href="\/WeatherForecast\/" \/>/g' wwwroot/index.html
+
+    - name: Add .nojekyll file
+      run: touch wwwroot/.nojekyll
+      
+    - name: Uploading files to gh-pages branch
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: pages
+        folder: wwwroot
